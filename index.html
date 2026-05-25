@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link id="favicon" rel="icon" href="assets/icon/icon.svg" type="image/svg+xml">
+  <link id="favicon" rel="icon" href="assets/icon/icon.png" sizes="100x100">
+  <title>Portfolio | Léni Carpentier</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">×</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  
+  
+  <!-- GRAIN -->
+  <div class="grain"></div>
+  
+  <!-- HERO -->
+  <header class="hero">
+      
+      <!-- NAV -->
+      
+      <nav>
+        <h3 class="name">Léni Carpentier</h3>
+
+        <ul>
+          <li>
+            <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
+          </li>
+          <li>
+            <a href="#aquarelle" data-i18n="nav.aquarelle"></a>
+          </li>
+          <li>
+            <a href="#boutique" data-i18n="nav.boutique"></a>
+          </li>
+          <li>
+            <a href="#me" data-i18n="nav.me"></a>
+          </li>
+          <li>
+            <a href="#contact" data-i18n="nav.contact"></a>
+          </li>
+
+          <li>
+            <button id="themeToggle" class="theme-toggle"></button>
+          </li>
+
+          <li>
+            <button id="langButton" class="lang-button"></button>
+          </li>
+        </ul>
+        
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="28" height="28">
+            <path d="M4 7h16M4 12h16M4 17h16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
+          </svg>
+        </button>
+        
+      </nav>
+      
+      <div class="mobile-menu" id="mobileMenu">
+
+        <button class="close-menu" id="closeMenu">×</button>
+
+        <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
+        <a href="#aquarelle" data-i18n="nav.aquarelle"></a>
+        <a href="#boutique" data-i18n="nav.boutique"></a>
+        <a href="#me" data-i18n="nav.me"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+
+        <button class="theme-toggle mobile-theme-toggle"></button>
+        <button class="lang-button mobile-lang-button"></button>
+
+      </div>
+      
+    <div class="hero-content fade-in">
+
+      <p class="small-title" data-i18n="hero.smallTitle"></p>
+
+      <h1 data-i18n="hero.title"></h1>
+
+      <p class="intro" data-i18n="hero.intro"></p>
+
+    </div>
+
+  </header>
+
+  <!-- VECTORIEL -->
+  <section id="vectoriel" class="section fade-in">
+
+    <div class="section-header">
+      <p class="section-tag">01</p>
+      <h2 data-i18n="sections.vectoriel"></h2>
+    </div>
+
+    <div class="gallery">
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="vectorCards.0.title"></h3>
+        <p data-i18n="vectorCards.0.text"></p>
+      </div>
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="vectorCards.1.title"></h3>
+        <p data-i18n="vectorCards.1.text"></p>
+      </div>
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="vectorCards.2.title"></h3>
+        <p data-i18n="vectorCards.2.text"></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AQUARELLE -->
+  <section id="aquarelle" class="section fade-in">
+
+    <div class="section-header">
+      <p class="section-tag">02</p>
+      <h2 data-i18n="sections.aquarelle"></h2>
+    </div>
+
+    <div class="gallery">
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="aquaCards.0.title"></h3>
+        <p data-i18n="aquaCards.0.text"></p>
+      </div>
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="aquaCards.1.title"></h3>
+        <p data-i18n="aquaCards.1.text"></p>
+      </div>
+
+      <div class="art-card">
+        <img src="assets/images/chat.png" class="clickable" alt="">
+        <h3 data-i18n="aquaCards.2.title"></h3>
+        <p data-i18n="aquaCards.2.text"></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOUTIQUES -->
+  <section id="boutique" class="boutique-section section fade-in">
+
+    <div class="section-header">
+      <p class="section-tag">03</p>
+      <h2 data-i18n="sections.boutique"></h2>
+    </div>
+
+    <div class="gallery">
+
+      <a href="https://www.redbubble.com/fr/people/T-Carpenters/shop?asc=u" target="_blank" class="shop-link" rel="noopener noreferrer">
+
+        <div class="art-card">
+          <img src="assets/images/redbubble.png" class="img-boutique" alt="">
+          <h3 data-i18n="boutiqueCards.0.title"></h3>
+          <p data-i18n="boutiqueCards.0.text"></p>
+        </div>
+
+      </a>
+
+      <a href="https://ink-light.dashery.com/" target="_blank" class="shop-link" rel="noopener noreferrer">
+
+        <div class="art-card">
+          <img src="assets/images/dashery.png" class="img-boutique" alt="">
+          <h3 data-i18n="boutiqueCards.1.title"></h3>
+          <p data-i18n="boutiqueCards.1.text"></p>
+        </div>
+
+      </a>
+      
+      <div class="support">
+        <h3 data-i18n="boutiqueCards.2.title"></h3>
+        <p data-i18n="boutiqueCards.2.text"></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- À PROPOS DE MOI -->
+  <section id="me" class="section fade-in">
+
+    <div class="section-header">
+      <p class="section-tag">04</p>
+      <h2 data-i18n="sections.me"></h2>
+    </div>
+
+    <div class="gallery">
+
+      <div class="me">
+        <h3 data-i18n="meCards.0.title"></h3>
+        <p data-i18n="meCards.0.text"></p>
+      </div>
+
+      <div class="me">
+        <h3 data-i18n="meCards.1.title"></h3>
+        <p data-i18n="meCards.1.text"></p>
+      </div>
+
+      <div class="me">
+        <h3 data-i18n="meCards.2.title"></h3>
+        <p data-i18n="meCards.2.text"></p>
+      </div>
+
+    </div>
+
+  </section>
+  
+  <!-- NEWSLETTER -->
+  <section class="newsletter fade-in">
+
+    <p class="section-tag">05</p>
+
+    <h2 data-i18n="sections.newsletter"></h2>
+
+    <p data-i18n="newsletter.text"></p>
+
+    <form class="newsletter-form" id="newsletterForm">
+
+      <div class="newsletter-row">
+
+        <input
+          type="text"
+          name="firstname"
+          placeholder="Prénom"
+          data-placeholder="newsletter.firstname"
+          required
+        />
+
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Nom"
+          data-placeholder="newsletter.lastname"
+          required
+        />
+
+      </div>
+
+      <!-- EMAIL -->
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        data-placeholder="contact.email"
+        required
+      />
+
+      <button type="submit" data-i18n="newsletter.button"></button>
+
+      <p class="email_use" data-i18n="newsletter.p"></p>
+
+    </form>
+    
+    <p class="form-message" id="newsletterMessage"></p>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
+
+    <p class="section-tag">06</p>
+
+    <h2 data-i18n="sections.contact"></h2>
+
+    <div class="contact-wrapper">
+
+      <form class="contact-form" id="contactForm">
+
+        <input
+          type="text"
+          placeholder="Nom"
+          data-placeholder="contact.name"
+          name="name"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          data-placeholder="contact.email"
+          name="email"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Objet"
+          data-placeholder="contact.subject"
+          name="subject"
+          required
+        />
+
+        <textarea
+          placeholder="Message"
+          data-placeholder="contact.message"
+          name="message"
+          required></textarea>
+
+        <button type="submit" data-i18n="contact.send"></button>
+
+        <p class="form-message" id="contactMessage"></p>
+        
+      </form>
+      
+      <div class="contact-info">
+
+        <p class="service" data-i18n="contact.service"></p>
+
+        <p class="location" data-i18n="contact.location"></p>
+
+        <p class="contact-description" data-i18n="contact.description"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="fade-in">
+    <p data-i18n="footer.copyright"></p>
+  </footer>
+  
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/script.js"></script>
+  
+</body>
+</html>
