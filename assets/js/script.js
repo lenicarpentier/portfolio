@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   /* =========================
      HELPERS
   ========================== */
@@ -52,18 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const fades = document.querySelectorAll(".fade-in");
 
   window.addEventListener("load", () => {
-    fades.forEach(el => observer.observe(el));
+    fades.forEach((el) => observer.observe(el));
   });
-    
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.15 });
 
-  fades.forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  fades.forEach((el) => observer.observe(el));
 
   /* =========================
      MOBILE MENU
@@ -94,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.querySelectorAll("#mobileMenu a").forEach(link => {
+  document.querySelectorAll("#mobileMenu a").forEach((link) => {
     link.addEventListener("click", closeMenuFn);
   });
 
@@ -102,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
      LIGHTBOX
   ========================== */
 
-  document.querySelectorAll(".clickable").forEach(img => {
+  document.querySelectorAll(".clickable").forEach((img) => {
     img.addEventListener("click", () => {
       if (!lightbox || !lightboxImg) return;
 
@@ -145,8 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const label =
       mode === "dark"
-        ? (window.currentLang === "fr" ? "Clair" : "Light")
-        : (window.currentLang === "fr" ? "Sombre" : "Dark");
+        ? window.currentLang === "fr"
+          ? "Clair"
+          : "Light"
+        : window.currentLang === "fr"
+        ? "Sombre"
+        : "Dark";
 
     setText(themeBtn, label);
     setText(mobileThemeBtn, label);
@@ -176,19 +182,17 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================== */
 
   function applyLanguage(lang) {
-
     document.body.classList.add("lang-fade");
 
     setTimeout(() => {
-
       window.currentLang = lang;
 
-      document.querySelectorAll("[data-i18n]").forEach(el => {
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
         const value = getTranslation(el.dataset.i18n, lang);
         if (value !== undefined) el.innerHTML = value;
       });
 
-      document.querySelectorAll("[data-placeholder]").forEach(el => {
+      document.querySelectorAll("[data-placeholder]").forEach((el) => {
         const value = getTranslation(el.dataset.placeholder, lang);
         if (value) el.placeholder = value;
       });
@@ -196,10 +200,13 @@ document.addEventListener("DOMContentLoaded", () => {
       setText(langBtn, lang.toUpperCase());
       setText(mobileLangBtn, lang.toUpperCase());
 
-      const themeLabel =
-        document.body.classList.contains("dark")
-          ? (lang === "fr" ? "Clair" : "Light")
-          : (lang === "fr" ? "Sombre" : "Dark");
+      const themeLabel = document.body.classList.contains("dark")
+        ? lang === "fr"
+          ? "Clair"
+          : "Light"
+        : lang === "fr"
+        ? "Sombre"
+        : "Dark";
 
       setText(themeBtn, themeLabel);
       setText(mobileThemeBtn, themeLabel);
@@ -209,7 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(() => {
         document.body.classList.remove("lang-fade");
       });
-
     }, 200);
   }
 
@@ -245,10 +251,13 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("email", email);
 
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzDkm6UfPIhpxCVBBWgC22mXCSNEwrDtKLJJ-aBRBMeW1kEPyYJVcwXg2qh_FtpEDU7ew/exec", {
-        method: "POST",
-        body: formData,
-      });
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbxUZMQ-OZVPpEhJ3S612wfIkbQaX0Mns-5Nu3aKvkzMe6eG7UZP9VR9Wi2elzsZXXK3zw/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const text = await res.text();
 
@@ -260,12 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           newsletterMessage.classList.remove("show", "success");
         }, 4000);
-
       } else {
         newsletterMessage.textContent = t("messages.newsletterError");
         newsletterMessage.classList.add("show", "error");
       }
-
     } catch (err) {
       newsletterMessage.textContent = t("messages.newsletterError");
       newsletterMessage.classList.add("show", "error");
@@ -291,10 +298,13 @@ document.addEventListener("DOMContentLoaded", () => {
     contactMessage.classList.add("show");
 
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzDkm6UfPIhpxCVBBWgC22mXCSNEwrDtKLJJ-aBRBMeW1kEPyYJVcwXg2qh_FtpEDU7ew/exec", {
-        method: "POST",
-        body: formData,
-      });
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbxUZMQ-OZVPpEhJ3S612wfIkbQaX0Mns-5Nu3aKvkzMe6eG7UZP9VR9Wi2elzsZXXK3zw/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const text = await res.text();
 
@@ -307,12 +317,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           contactMessage.classList.remove("show", "success");
         }, 4000);
-
       } else {
         contactMessage.textContent = t("messages.contactError");
         contactMessage.classList.add("error");
       }
-
     } catch (err) {
       contactMessage.textContent = t("messages.contactError");
       contactMessage.classList.add("error");
@@ -325,5 +333,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyLanguage(window.currentLang);
   applyTheme(theme);
-
 });
