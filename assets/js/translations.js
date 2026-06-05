@@ -84,17 +84,17 @@ const translations = {
   en: {
     nav: {
       aquarelle: "Watercolor",
-      vectoriel: "Vector",
+      vectoriel: "Vector Design",
       boutique: "Shops",
       me: "About",
       contact: "Contact",
     },
 
     hero: {
-      smallTitle: "Artistic portfolio",
-      title: "Two practices.<br>One sensitivity.",
+      smallTitle: "Art Portfolio",
+      title: "Two Practices.<br>One Sensibility.",
       intro:
-        "Vector design and watercolor, explored separately through a personal and evolving visual research.",
+        "Vector design and traditional watercolor, explored through distinct yet complementary artistic practices.",
     },
 
     sections: {
@@ -107,35 +107,79 @@ const translations = {
     },
 
     aquaCards: [
-      { title: "Colors and nature", text: "Natural color associations and warm tones." },
-      { title: "Abstract Landscape", text: "Soft color balance." },
-      { title: "Chromatic Research", text: "Layering and dilution." },
+      {
+        title: "Colors and Nature",
+        text: "Natural color harmonies and warm, organic palettes.",
+      },
+      {
+        title: "Monochromatic Landscape",
+        text: "Soft, diffused colors and a delicate visual balance.",
+      },
+      {
+        title: "Animal Studies",
+        text: "Layering techniques and subtle pigment dilution.",
+      },
     ],
 
     vectorCards: [
-      { title: "Experimental Poster", text: "Geometric composition and graphic tension.", text2: "OMTake application" },
-      { title: "Editorial Series", text: "Minimalist typography.", text2: "OMTake application" },
-      { title: "Visual Identity", text: "Vector system and shapes." },
+      {
+        title: "Icon Design",
+        text: "Geometric composition and graphic tension.",
+        text2: "OMTake Application",
+      },
+      {
+        title: "Layout Design",
+        text: "Minimalist typographic exploration.",
+        text2: "OMTake Application",
+      },
+      {
+        title: "Visual Identity",
+        text: "A vector system built around a coherent language of shapes.",
+      },
     ],
 
     boutiqueCards: [
-      { title: "Redbubble", text: "Léni Carpentier Shop | Redbubble" },
-      { title: "Dashery", text: "Léni | Official Merch Store" },
-      { title: "Print on demand stores", text: "Discover here a selection of products printed on demand with my creations.<br><br>Through these articles, you can support me in my artistic practice.<br><br>Thank you so much!",},
+      {
+        title: "Redbubble",
+        text: "Léni Carpentier Shop | Redbubble",
+      },
+      {
+        title: "Dashery",
+        text: "Léni | Official Merchandise Store",
+      },
+      {
+        title: "Print-on-Demand Stores",
+        text:
+          "Discover a selection of print-on-demand products featuring my artwork.<br><br>By purchasing these items, you directly support my artistic practice and future projects.<br><br>Thank you very much for your support!",
+      },
     ],
 
     meCards: [
-      { title: "Personality", text: "My name is Léni Carpentier.<br><br>I am an observant young man, sensitive and passionate about artistic creation. I like to explore different techniques and styles to reproduce the world from my point of view, through art.<br><br>I remain open to constructive criticism, as well as to the projects desired by lovers of my art." },
-      { title: "Activities", text: "I am passionate about vector and watercolor creation, as you have already noticed. I like to design clear, modern and intuitive experiences, where each detail has a role in the vision that everyone brings to my works.<br><br>Currently in training, I am developing my skills through personal projects and enriching myself in practice.<br><br>My goal is to continue progressing so that I can one day become a professional in this field.<br><br>And it is partly thanks to your support that I can continue to move forward on this path, for which I warmly thank you!"},
-      { title: "Style", text: "I like what is sober, pleasantly colorful and clean. I seek to create works that exude a calming and balanced atmosphere, while being visually appealing.<br><br>My style is characterized by a harmonious use of colors, clean shapes and a particular attention to detail, in order to convey an emotion or an idea clearly and aesthetically."},
+      {
+        title: "Personality",
+        text:
+          "My name is Léni Carpentier.<br><br>I am an observant and sensitive young artist with a passion for creative expression. Through art, I enjoy exploring different techniques and styles to interpret the world from my own perspective.<br><br>I welcome constructive feedback and remain open to collaborating on projects that resonate with admirers of my work.",
+      },
+
+      {
+        title: "Activity",
+        text:
+          "As you may have noticed, I am passionate about both vector design and watercolor painting. I enjoy creating clear, modern, and thoughtful visual experiences, where every detail contributes to the overall perception of a piece.<br><br>Currently developing my artistic and design skills through personal projects and continuous practice, I strive to learn and improve every day.<br><br>My goal is to keep progressing and eventually build a professional career in the creative field.<br><br>Your support plays an important role in helping me continue this journey, and for that, I am sincerely grateful.",
+      },
+
+      {
+        title: "Style",
+        text:
+          "I am drawn to simplicity, harmonious colors, and clean visual compositions. My aim is to create artwork that conveys a sense of calm, balance, and visual appeal.<br><br>My style is characterized by thoughtful color choices, refined shapes, and careful attention to detail, allowing me to communicate emotions and ideas with clarity and elegance.",
+      },
     ],
 
     newsletter: {
-      firstname: "First name",
-      lastname: "Last name",
-      text: "Receive new artworks and projects.",
+      firstname: "First Name",
+      lastname: "Last Name",
+      text: "Receive updates on new artworks, visual explorations, and ongoing projects.",
       button: "Subscribe",
-      p: "Your email is only used to receive artistic news.",
+      p: "Your email address will only be used to receive updates about my artistic work.",
     },
 
     contact: {
@@ -144,21 +188,23 @@ const translations = {
       subject: "Subject",
       message: "Message",
       send: "Send",
-      service: "At your service",
+      service: "Get in Touch",
       location: "<strong>Location:</strong> Schwindratzheim, France",
-      description: "I am available to create content for you that matches my style. Feel free to contact me for any request or question, I will be happy to answer you and exchange with you.",
+      description:
+        "I am available for creative projects that align with my artistic style. Feel free to contact me with any questions, ideas, or collaboration opportunities. I would be delighted to hear from you and discuss your project.",
     },
 
     messages: {
       loading: "Sending...",
       newsletterSuccess: "Email successfully registered.",
-      newsletterError: "Error while subscribing.",
+      newsletterError: "Subscription failed.",
       contactSuccess: "Message sent successfully.",
-      contactError: "Error while sending message.",
+      contactError: "Failed to send message.",
     },
 
     footer: {
-      copyright: "Copyright © 2026 — Léni Carpentier | All rights reserved",
+      copyright:
+        "Copyright © 2026 — Léni Carpentier | All Rights Reserved",
     },
-  },
+  },  
 };
