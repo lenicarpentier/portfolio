@@ -27,7 +27,7 @@ const translations = {
     aquaCards: [
       { title: "Couleurs et nature", text: "Association naturelle et chaudement colorée." },
       { title: "Paysage monochromatique", text: "Couleurs diffuses et équilibre sensible." },
-      { title: "Reproduction animale", text: "Superposition et dilution pigmentaire."},
+      { title: "Études Animales", text: "Superposition et dilution pigmentaire."},
     ],
 
     vectorCards: [
