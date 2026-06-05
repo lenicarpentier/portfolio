@@ -1,5 +1,6 @@
-/* RESET */
-
+/* --------------------
+   Reset
+   -------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,10 @@ main,
   transform: none;
 }
 
-/* BASE */
 
+/* --------------------
+   Base / Globals
+   -------------------- */
 html {
   scroll-behavior: smooth;
 }
@@ -24,10 +27,13 @@ body {
   font-weight: 200;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.4s ease, color 0.4s ease,
-    opacity var(--transition-fast);
+  transition: background 0.4s ease, color 0.4s ease, opacity var(--transition-fast);
 }
 
+
+/* --------------------
+   CSS Variables
+   -------------------- */
 :root {
   --bg: #ede4d5;
   --placeholder: #111;
@@ -41,6 +47,10 @@ body {
   --accent: #882d17;
   --accent-border: rgba(136, 45, 23, 0.3);
   --shadow: rgba(17, 17, 17, 0.1);
+  --button-border: rgba(237, 228, 213, 0.2);
+  --button-shadow: rgba(0, 0, 0, 0.2);
+  --button-shadow-hover: rgba(0, 0, 0, 0.25);
+  --lang-theme-toogle-hover: rgba(0, 0, 0, 0.1);
 
   --section-newsletter: rgba(158, 87, 70, 0.6);
   --section-boutique: rgba(111, 136, 158, 0.6);
@@ -91,6 +101,10 @@ body.dark {
   --accent: #d3a07b;
   --accent-border: rgba(211, 160, 123, 0.3);
   --shadow: rgba(237, 228, 213, 0.1);
+  --button-border: rgba(237, 228, 213, 0.2);
+  --button-shadow: rgba(237, 228, 213, 0.1);
+  --button-shadow-hover: rgba(237, 228, 213, 0.15);
+  --lang-theme-toogle-hover: rgba(237, 228, 213, 0.1);
 
   --section-boutique: var(--section-boutique-dark);
 }
@@ -99,8 +113,10 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* GRAIN TEXTURE */
 
+/* --------------------
+   Grain texture
+   -------------------- */
 .grain {
   position: fixed;
   inset: 0;
@@ -109,8 +125,10 @@ body.menu-open {
   background-image: url("../images/background.png");
 }
 
-/* NAV */
 
+/* --------------------
+   Navigation
+   -------------------- */
 nav {
   isolation: isolate;
   position: fixed;
@@ -157,7 +175,6 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--text);
-
   transition: opacity var(--transition), color var(--transition);
 }
 
@@ -220,12 +237,13 @@ nav .name:hover {
   position: fixed;
   z-index: 999999;
   isolation: isolate;
-
   display: none;
 }
 
-/* HERO */
 
+/* --------------------
+   Hero
+   -------------------- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -301,8 +319,10 @@ body.dark .hero::before {
   color: var(--muted);
 }
 
-/* SECTION */
 
+/* --------------------
+   Sections
+   -------------------- */
 .section,
 .newsletter,
 .contact {
@@ -336,29 +356,22 @@ body.dark .hero::before {
   font-weight: 400;
 }
 
-/* GALLERY */
 
+/* --------------------
+   Gallery / Lightbox
+   -------------------- */
 .support {
-  margin-top: 70px;
   max-width: 400px;
 }
 
 .gallery > * {
-  justify-self: center;
+  justify-self: stretch;
 }
 
-.clickable {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: transform var(--transition);
-}
-
+.clickable,
 .img-boutique {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius-lg);
   cursor: pointer;
@@ -431,13 +444,19 @@ body.dark .hero::before {
 .gallery {
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* CARD */
 
+/* --------------------
+   Cards
+   -------------------- */
 .art-card {
+  width: 100%;
+  min-width: 0;
   max-width: 400px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -446,15 +465,19 @@ body.dark .hero::before {
   transform: translateY(-10px) scale(1.02);
 }
 
-/* WATERCOLOR */
 
+/* --------------------
+   Watercolor (utility)
+   -------------------- */
 .watercolor {
   background: #9e5746;
   opacity: 0.5;
 }
 
-/* TYPO */
 
+/* --------------------
+   Typography / Text
+   -------------------- */
 .art-card h3 {
   font-size: 22px;
   margin-bottom: var(--space-md);
@@ -468,8 +491,16 @@ body.dark .hero::before {
   line-height: 1.7;
 }
 
+.omtake a {
+  font-style: italic;
+  color: var(--muted);
+  opacity: 0.8;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: var(--space-sm);
+}
+
 .me p {
-  max-width: auto;
   font-size: 16px;
   color: var(--muted);
   margin-bottom: 10px;
@@ -523,8 +554,10 @@ body.dark .hero::before {
   line-height: 1.7;
 }
 
-/* NEWSLETTER */
 
+/* --------------------
+   Newsletter
+   -------------------- */
 .newsletter {
   background-color: var(--section-newsletter);
   text-align: center;
@@ -562,8 +595,10 @@ body.dark .hero::before {
   opacity: 0.8;
 }
 
-/* SHOPS */
 
+/* --------------------
+   Shops / Boutique
+   -------------------- */
 .boutique-section {
   background: var(--section-boutique);
 }
@@ -578,8 +613,10 @@ body.dark .boutique-section {
   display: block;
 }
 
-/* FORMS */
 
+/* --------------------
+   Forms
+   -------------------- */
 .newsletter-row {
   display: flex;
   gap: 15px;
@@ -603,6 +640,7 @@ body.dark .boutique-section {
   flex-direction: column;
   gap: var(--gap-sm);
   max-width: 500px;
+  box-sizing: border-box;
 }
 
 .newsletter-form {
@@ -647,12 +685,28 @@ button {
   color: #ede4d5;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+.newsletter button,
+.contact button {
+  border-bottom: 2px solid var(--button-border);
+  box-shadow: 0 8px 18px var(--button-shadow);
+  backdrop-filter: blur(4px);
+}
+
+.newsletter button:hover,
+.contact button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+  box-shadow: 0 8px 18px var(--button-shadow-hover);
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
 }
 
 button:hover {
   transform: translateY(-3px);
-  opacity: 0.9;
+  opacity: 0.95;
+  box-shadow: 0 8px 18px var(--lang-theme-toogle-hover);
 }
 
 .contact-wrapper {
@@ -664,7 +718,7 @@ button:hover {
 }
 
 .contact-info {
-  flex: 0 0 350px;
+  /* flex: 0 0 350px; */
   line-height: 35px;
   max-width: 350px;
   font-size: 16px;
@@ -683,8 +737,10 @@ button:hover {
   text-transform: uppercase;
 }
 
-/* FOOTER */
 
+/* --------------------
+   Footer
+   -------------------- */
 footer {
   line-height: 1.5;
   font-size: 12px;
@@ -692,8 +748,10 @@ footer {
   text-align: center;
 }
 
-/* ANIMATIONS */
 
+/* --------------------
+   Animations
+   -------------------- */
 .fade-in {
   opacity: 0;
   transform: translateY(var(--fade-in-distance));
@@ -705,21 +763,64 @@ footer {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
 
-@media (max-width: 520px) {
+/* --------------------
+   Responsive
+   -------------------- */
+@media (max-width: 700px) {
   .hero h1 {
-    line-height: 1.4;
-    font-size: 25px;
+    line-height: 1.2;
   }
 
   .hero::before {
     top: 55%;
     left: 30%;
+    width: 450px;
+    height: 450px;
+
+    width: clamp(250px, 45vw, 700px);
+    aspect-ratio: 1 / 1;
+    width: 450px;
+    height: 450px;
   }
 
   .newsletter-row {
     flex-direction: column;
+  }
+
+  #vectoriel,
+  #aquarelle,
+  #boutique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #vectoriel .gallery,
+  #aquarelle .gallery,
+  #boutique .gallery {
+    max-width: 360px;
+    width: 100%;
+    margin-inline: auto;
+    justify-items: center;
+  }
+
+  #vectoriel .art-card,
+  #aquarelle .art-card,
+  #boutique .art-card,
+  #boutique .support {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  #vectoriel .section-header,
+  #aquarelle .section-header,
+  #boutique .section-header {
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    align-items: flex-start;
+    text-align: left;
   }
 
   nav {
@@ -732,6 +833,11 @@ footer {
 
   .gallery {
     grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .art-card {
+    max-width: 350px;
   }
 
   .section h2,
@@ -742,6 +848,29 @@ footer {
 
   .contact-wrapper {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .section h2,
+  .newsletter h2,
+  .contact h2 {
+    font-size: 48px;
+  }
+
+  .section-tag,
+  .art-card h3,
+  .me h3,
+  .support h3 {
+    font-size: 20px;
+  }
+
+  .art-card p,
+  .me p,
+  .support p,
+  .contact-info,
+  .intro {
+    font-size: 15px;
   }
 }
 
@@ -772,6 +901,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
 
     background: none;
     border: none;
@@ -786,6 +916,7 @@ footer {
   }
 
   .hamburger:hover {
+    box-shadow: none;
     opacity: 0.45;
     transform: translateY(-2px);
     transition: 0.2s ease;
@@ -836,7 +967,6 @@ footer {
   .mobile-menu a {
     text-decoration: none;
     color: var(--text);
-
     transition: 0.2s ease;
   }
 
@@ -899,3 +1029,4 @@ footer {
     transition: 0.2s ease;
   }
 }
+

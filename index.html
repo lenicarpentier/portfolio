@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- ========== Head: metadata, fonts, styles ========== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/icon/icon.svg" type="image/svg+xml" />
-    
+
     <title>Portfolio | Léni Carpentier</title>
 
     <!-- GOOGLE FONT -->
@@ -20,28 +21,37 @@
   </head>
 
   <body>
-    <!-- LIGHTBOX -->
+    <!-- ========== Body: content sections ========== -->
+    <!-- ========== Lightbox (overlay) ========== -->
     <div class="lightbox" id="lightbox">
       <span class="close" id="closeBtn">×</span>
       <img id="lightbox-img" src="" alt="" />
     </div>
 
-    <!-- GRAIN -->
+    <!-- ========== Grain texture ========== -->
     <div class="grain"></div>
 
-    <!-- HERO -->
+    <!-- ========== Hero (top) ========== -->
     <header class="hero">
-      <!-- NAV -->
+      <!-- ========== Navigation ========== -->
 
       <nav>
-        <h3 class="name" role="button" tabindex="0" onclick="location.reload()" onkeydown="if(event.key==='Enter'){location.reload();}">Léni Carpentier</h3>
+        <h3
+          class="name"
+          role="button"
+          tabindex="0"
+          onclick="location.reload()"
+          onkeydown="if(event.key==='Enter'){location.reload();}"
+        >
+          Léni Carpentier
+        </h3>
 
         <ul>
           <li>
-            <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
+            <a href="#aquarelle" data-i18n="nav.aquarelle"></a>
           </li>
           <li>
-            <a href="#aquarelle" data-i18n="nav.aquarelle"></a>
+            <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
           </li>
           <li>
             <a href="#boutique" data-i18n="nav.boutique"></a>
@@ -76,10 +86,11 @@
       </nav>
 
       <div class="mobile-menu" id="mobileMenu">
+        <!-- ========== Mobile menu (small screens) ========== -->
         <button class="close-menu" id="closeMenu">×</button>
 
-        <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
         <a href="#aquarelle" data-i18n="nav.aquarelle"></a>
+        <a href="#vectoriel" data-i18n="nav.vectoriel"></a>
         <a href="#boutique" data-i18n="nav.boutique"></a>
         <a href="#me" data-i18n="nav.me"></a>
         <a href="#contact" data-i18n="nav.contact"></a>
@@ -89,6 +100,7 @@
       </div>
 
       <div class="hero-content fade-in">
+        <!-- ========== Hero content: title / intro ========== -->
         <p class="small-title" data-i18n="hero.smallTitle"></p>
 
         <h1 data-i18n="hero.title"></h1>
@@ -97,63 +109,65 @@
       </div>
     </header>
 
-    <!-- VECTORIEL -->
-    <section id="vectoriel" class="section fade-in">
-      <div class="section-header">
-        <p class="section-tag">01</p>
-        <h2 data-i18n="sections.vectoriel"></h2>
-      </div>
-
-      <div class="gallery">
-        <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
-          <h3 data-i18n="vectorCards.0.title"></h3>
-          <p data-i18n="vectorCards.0.text"></p>
-        </div>
-
-        <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
-          <h3 data-i18n="vectorCards.1.title"></h3>
-          <p data-i18n="vectorCards.1.text"></p>
-        </div>
-
-        <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
-          <h3 data-i18n="vectorCards.2.title"></h3>
-          <p data-i18n="vectorCards.2.text"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- AQUARELLE -->
+    <!-- ========== Section: Aquarelle (01) ========== -->
     <section id="aquarelle" class="section fade-in">
       <div class="section-header">
-        <p class="section-tag">02</p>
+        <p class="section-tag">01</p>
         <h2 data-i18n="sections.aquarelle"></h2>
       </div>
 
       <div class="gallery">
         <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
+          <img src="assets/images/watercolor1_cœur.png" class="clickable" alt="" />
           <h3 data-i18n="aquaCards.0.title"></h3>
           <p data-i18n="aquaCards.0.text"></p>
         </div>
 
         <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
+          <img src="assets/images/watercolor2_paysage.png" class="clickable" alt="" />
           <h3 data-i18n="aquaCards.1.title"></h3>
           <p data-i18n="aquaCards.1.text"></p>
         </div>
 
         <div class="art-card">
-          <img src="assets/images/chat.png" class="clickable" alt="" />
+          <img src="assets/images/watercolor3_chat.png" class="clickable" alt="" />
           <h3 data-i18n="aquaCards.2.title"></h3>
           <p data-i18n="aquaCards.2.text"></p>
         </div>
       </div>
     </section>
 
-    <!-- BOUTIQUES -->
+    <!-- ========== Section: Vectoriel (02) ========== -->
+    <section id="vectoriel" class="section fade-in">
+      <div class="section-header">
+        <p class="section-tag">02</p>
+        <h2 data-i18n="sections.vectoriel"></h2>
+      </div>
+
+      <div class="gallery">
+        <div class="art-card">
+          <img src="assets/images/vector1_icon.png" class="clickable" alt="" />
+          <h3 data-i18n="vectorCards.0.title"></h3>
+          <p data-i18n="vectorCards.0.text"></p>
+          <div class="omtake"><a data-i18n="vectorCards.0.text2" href="https://apps.apple.com/app/omtake/id6767678547" target="_blank"></a></div>
+        </div>
+
+        <div class="art-card">
+          <img src="assets/images/vector2_page.png" class="clickable" alt="" />
+          <h3 data-i18n="vectorCards.1.title"></h3>
+          <p data-i18n="vectorCards.1.text"></p>
+          <div class="omtake"><a data-i18n="vectorCards.1.text2" href="https://apps.apple.com/app/omtake/id6767678547" target="_blank"></a></div>
+        </div>
+
+        <div class="art-card">
+          <img src="assets/images/vector3_identité.png" class="clickable" alt="" />
+          <h3 data-i18n="vectorCards.2.title"></h3>
+          <p data-i18n="vectorCards.2.text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Section: Boutiques (03) ========== -->
     <section id="boutique" class="boutique-section section fade-in">
       <div class="section-header">
         <p class="section-tag">03</p>
@@ -168,11 +182,7 @@
           rel="noopener noreferrer"
         >
           <div class="art-card">
-            <img
-              src="assets/images/redbubble.png"
-              class="img-boutique"
-              alt=""
-            />
+            <img src="assets/images/boutique1_redbubble.png" class="img-boutique" alt="" />
             <h3 data-i18n="boutiqueCards.0.title"></h3>
             <p data-i18n="boutiqueCards.0.text"></p>
           </div>
@@ -185,7 +195,7 @@
           rel="noopener noreferrer"
         >
           <div class="art-card">
-            <img src="assets/images/dashery.png" class="img-boutique" alt="" />
+            <img src="assets/images/boutique2_dashery.png" class="img-boutique" alt="" />
             <h3 data-i18n="boutiqueCards.1.title"></h3>
             <p data-i18n="boutiqueCards.1.text"></p>
           </div>
@@ -198,7 +208,7 @@
       </div>
     </section>
 
-    <!-- À PROPOS DE MOI -->
+    <!-- ========== Section: À propos (04) ========== -->
     <section id="me" class="section fade-in">
       <div class="section-header">
         <p class="section-tag">04</p>
@@ -223,7 +233,7 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
+    <!-- ========== Section: Newsletter (05) ========== -->
     <section class="newsletter fade-in">
       <p class="section-tag">05</p>
 
@@ -267,7 +277,7 @@
       <p class="form-message" id="newsletterMessage"></p>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ========== Section: Contact (06) ========== -->
     <section id="contact" class="contact fade-in">
       <p class="section-tag">06</p>
 
@@ -319,11 +329,12 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ========== Footer ========== -->
     <footer class="fade-in">
       <p data-i18n="footer.copyright"></p>
     </footer>
 
+    <!-- ========== Scripts ========== -->
     <script src="assets/js/translations.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
