@@ -55,7 +55,7 @@ body {
   --section-newsletter: rgba(158, 87, 70, 0.6);
   --section-boutique: rgba(111, 136, 158, 0.6);
   --section-boutique-dark: rgba(46, 54, 61, 0.6);
-  --fade-bottom-color: #ede4d5;
+  --fade-bottom-color: rgba(237, 228, 213, 0.7);
 
   --btn-bg: #222;
   --btn-color: #fff;
@@ -106,7 +106,7 @@ body.dark {
   --button-shadow: rgba(237, 228, 213, 0.1);
   --button-shadow-hover: rgba(237, 228, 213, 0.15);
   --lang-theme-toogle-hover: rgba(237, 228, 213, 0.1);
-  --fade-bottom-color: #111;
+  --fade-bottom-color: rgba(17, 17, 17, 0.7);
 
   --section-boutique: var(--section-boutique-dark);
 }
@@ -195,7 +195,7 @@ nav .name:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 90px;
+  height: 50px;
   pointer-events: none;
   z-index: 99998;
   background: linear-gradient(to bottom, rgba(237, 228, 213,0) 10%, var(--fade-bottom-color) 100%);
