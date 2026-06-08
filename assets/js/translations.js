@@ -26,7 +26,7 @@ const translations = {
 
     aquaCards: [
       { title: "Couleurs et nature", text: "Association naturelle et chaudement colorée." },
-      { title: "Paysage monochromatique", text: "Couleurs diffuses et équilibre sensible." },
+      { title: "Paysage monochrome", text: "Couleurs diffuses et équilibre sensible." },
       { title: "Études Animales", text: "Superposition et dilution pigmentaire."},
     ],
 
@@ -112,7 +112,7 @@ const translations = {
         text: "Natural color harmonies and warm, organic palettes.",
       },
       {
-        title: "Monochromatic Landscape",
+        title: "Monochrome Landscape",
         text: "Soft, diffused colors and a delicate visual balance.",
       },
       {
