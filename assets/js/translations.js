@@ -36,6 +36,10 @@ const translations = {
       { title: "Identité visuelle", text: "Système vectoriel et langage de formes." },
     ],
 
+    contentCards: [
+      { text: "Toutes les créations que je vous ai partagées ici ne sont qu'une infime partie de mon univers créatif. Si vous voulez en connaître davantage, n'hésitez pas à vous abonnez à ma newsletter!", button: "S'abonner" },
+    ],
+
     boutiqueCards: [
       { title: "Redbubble", text: "Boutique de Léni Carpentier | Redbubble" },
       { title: "Dashery", text: "Léni | Boutique Officielle" },
@@ -136,6 +140,10 @@ const translations = {
         title: "Visual Identity",
         text: "A vector system built around a coherent language of shapes.",
       },
+    ],
+
+    contentCards: [
+      { text: "All the creations I've shared here with you are just a small part of my creative universe. If you want to know more, feel free to subscribe to my newsletter!", button: "Subscribe" },
     ],
 
     boutiqueCards: [

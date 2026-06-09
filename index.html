@@ -167,6 +167,21 @@
       </div>
     </section>
 
+    <!-- ========== Section: Content ========== -->
+
+    <section id="content" class="section fade-in">
+      <div class="info">  
+        <div>
+          <p data-i18n="contentCards.0.text"></p>
+        </div>
+
+        <button class="newsletter-button" onclick="document.getElementById('newsletter').scrollIntoView({ behavior: 'smooth' });">
+          <span data-i18n="contentCards.0.button" class="info"></span>
+        </button>
+      </div>
+    </section>
+
+
     <!-- ========== Section: Boutiques (03) ========== -->
     <section id="boutique" class="boutique-section section fade-in">
       <div class="section-header">
@@ -234,7 +249,7 @@
     </section>
 
     <!-- ========== Section: Newsletter (05) ========== -->
-    <section class="newsletter fade-in">
+    <section class="newsletter fade-in" id="newsletter">
       <p class="section-tag">05</p>
 
       <h2 data-i18n="sections.newsletter"></h2>
@@ -271,7 +286,7 @@
 
         <button type="submit" data-i18n="newsletter.button"></button>
 
-        <p class="email_use" data-i18n="newsletter.p"></p>
+        <p class="info" data-i18n="newsletter.p"></p>
       </form>
 
       <p class="form-message" id="newsletterMessage"></p>

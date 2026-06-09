@@ -50,12 +50,13 @@ body {
   --button-border: rgba(237, 228, 213, 0.2);
   --button-shadow: rgba(0, 0, 0, 0.2);
   --button-shadow-hover: rgba(0, 0, 0, 0.25);
+  --btn-newsletter: rgba(136, 45, 23, 0.7);
   --lang-theme-toogle-hover: rgba(0, 0, 0, 0.1);
 
   --section-newsletter: rgba(158, 87, 70, 0.6);
   --section-boutique: rgba(111, 136, 158, 0.6);
   --section-boutique-dark: rgba(46, 54, 61, 0.6);
-  --fade-bottom-color: rgba(237, 228, 213, 0.7);
+  --fade-bottom-color: rgba(237, 228, 213, 0.4);
 
   --btn-bg: #222;
   --btn-color: #fff;
@@ -105,6 +106,7 @@ body.dark {
   --button-border: rgba(237, 228, 213, 0.2);
   --button-shadow: rgba(237, 228, 213, 0.1);
   --button-shadow-hover: rgba(237, 228, 213, 0.15);
+  --btn-newsletter:rgba(211, 160, 123, 0.7);
   --lang-theme-toogle-hover: rgba(237, 228, 213, 0.1);
   --fade-bottom-color: rgba(17, 17, 17, 0.7);
 
@@ -202,6 +204,10 @@ nav .name:hover {
 }
 
 .theme-toggle {
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 1;
+  font-size: 15px;
   background: none;
   border: 1px solid var(--text);
   color: var(--text);
@@ -217,6 +223,10 @@ nav .name:hover {
 }
 
 .lang-button {
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 1;
+  font-size: 15px;
   background: none;
   border: 1px solid var(--text);
   color: var(--text);
@@ -579,15 +589,38 @@ body.dark .hero::before {
 .newsletter p {
   margin-top: var(--space-sm);
   color: rgba(255, 255, 255, 0.7);
+  line-height: 2.5;
+  font-weight: 100;
 }
 
-.email_use {
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 30px;
-  opacity: 0.8;
-  font-size: 10px;
+  opacity: 0.9;
+  font-size: 12px;
   font-family: "Inter";
+}
+
+.info p {
+  line-height: 2.5;
+  max-width: 600px;
+  font-weight: 100;
+}
+
+button.newsletter-button {
+  padding: 20px 25px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--btn-bg);
+  color: #ede4d5;
+  border-bottom: 2px solid var(--button-border);
+  box-shadow: 0 8px 18px var(--button-shadow);
 }
 
 .form-message {
@@ -691,14 +724,18 @@ textarea::placeholder {
 }
 
 button {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
   padding: 18px;
   border: none;
   border-radius: var(--radius-md);
   background: var(--btn-bg);
   color: #ede4d5;
-  font-size: 16px;
   cursor: pointer;
   transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  font-size: 12px;
 }
 
 .newsletter button,
