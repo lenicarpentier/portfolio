@@ -820,8 +820,8 @@ footer {
 }
 
 .footer-content img:hover {
-  opacity: 0.6;
-  transition: opacity 0.5s ease;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .footer-content a {
@@ -838,10 +838,6 @@ footer {
   font-size: var(--space-xs);
   line-height: 1.4;
   padding: var(--space-xs);
-}
-
-.footer-content a:hover {
-  opacity: 0.6;
 }
 
 /* --------------------
