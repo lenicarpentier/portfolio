@@ -157,12 +157,44 @@ document.addEventListener("DOMContentLoaded", () => {
     setText(themeBtn, label);
     setText(mobileThemeBtn, label);
 
-    const favicon = document.getElementById("favicon");
-    if (favicon) {
-      favicon.href =
+    const github_icon = document.getElementById("github_icon");
+    if (github_icon) {
+      github_icon.src =
         mode === "dark"
-          ? "assets/images/favicon_dark.svg"
-          : "assets/images/favicon_light.svg";
+          ? "assets/icon/github_dark.svg"
+          : "assets/icon/github_light.svg";
+    }
+
+    const pinterest_icon = document.getElementById("pinterest_icon");
+    if (pinterest_icon) {
+      pinterest_icon.src =
+        mode === "dark"
+          ? "assets/icon/pinterest_dark.svg"
+          : "assets/icon/pinterest_light.svg";
+    }
+
+    const redbubble_icon = document.getElementById("redbubble_icon");
+    if (redbubble_icon) {
+      redbubble_icon.src =
+        mode === "dark"
+          ? "assets/icon/redbubble_dark.svg"
+          : "assets/icon/redbubble_light.svg";
+    }
+
+    const dashery_icon = document.getElementById("dashery_icon");
+    if (dashery_icon) {
+      dashery_icon.src =
+        mode === "dark"
+          ? "assets/icon/dashery_dark.svg"
+          : "assets/icon/dashery_light.svg";
+    }
+
+    const teepublic_icon = document.getElementById("teepublic_icon");
+    if (teepublic_icon) {
+      teepublic_icon.src =
+        mode === "dark"
+          ? "assets/icon/teepublic_dark.svg"
+          : "assets/icon/teepublic_light.svg";
     }
 
     localStorage.setItem("theme", mode);

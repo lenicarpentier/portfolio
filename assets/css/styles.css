@@ -748,14 +748,14 @@ button {
 .newsletter button:hover,
 .contact button:hover {
   transform: translateY(-3px);
-  opacity: 0.9;
+  opacity: 0.8;
   box-shadow: 0 8px 18px var(--button-shadow-hover);
   transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
 }
 
 button:hover {
   transform: translateY(-3px);
-  opacity: 0.95;
+  opacity: 0.8;
   box-shadow: 0 8px 18px var(--lang-theme-toogle-hover);
 }
 
@@ -792,12 +792,57 @@ button:hover {
    Footer
    -------------------- */
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid var(--border-nav);
   line-height: 1.5;
   font-size: 12px;
   padding: 25px;
   text-align: center;
+  gap: var(--space-md);
 }
 
+.footer-content {
+  margin-top: var(--space-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--muted);
+}
+
+.footer-content img {
+  width: 40px;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.footer-content img:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.footer-content a {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+}
+
+.footer-content p {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: var(--space-xs);
+  line-height: 1.4;
+  padding: var(--space-xs);
+}
+
+.footer-content a:hover {
+  opacity: 0.6;
+}
 
 /* --------------------
    Animations
@@ -1083,6 +1128,18 @@ footer {
 @media (max-width: 700px) {
   .bottom-fade {
     height: 80px;
+  }
+
+  .footer-content {
+    gap: var(--space-sm);
+  }
+
+  .footer-content p {
+    display: none;
+  }
+
+  .footer-content img {
+    width: 30px;
   }
 }
 
