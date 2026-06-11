@@ -352,6 +352,12 @@ body.dark .hero::before {
   padding: var(--space-xl) 10%;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -359,6 +365,9 @@ body.dark .hero::before {
 }
 
 .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   margin-bottom: 60px;
 }
 
@@ -374,6 +383,8 @@ body.dark .hero::before {
 .section h2,
 .newsletter h2,
 .contact h2 {
+  display: inline-flex;
+
   font-family: "Libre Baskerville", serif;
   font-size: 64px;
   font-weight: 400;
@@ -470,7 +481,7 @@ body.dark .hero::before {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-md);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 
@@ -676,21 +687,21 @@ body.dark .boutique-section {
 .contact-form {
   width: 100%;
   max-width: 500px;
-  flex: 1;
+  flex: 0 0 300px;
 }
 
 .newsletter-form,
 .contact-form {
-  margin-top: var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
-  max-width: 500px;
   box-sizing: border-box;
 }
 
 .newsletter-form {
+  margin-top: var(--space-md);
   margin-inline: auto;
+  max-width: 500px;
 }
 
 input,
@@ -939,6 +950,18 @@ footer {
 
   .contact-wrapper {
     flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    flex: 0 0 500px;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
   }
 }
 
