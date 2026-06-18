@@ -665,7 +665,12 @@ body.dark .teepublic-wrapper::before {
   opacity: 0.13;
 }
 
-.teepublic-block .createShop {
+.teepublic-wrapper .createShop {
+  position: relative;
+  z-index: 1;
+}
+
+.teepublic-wrapper > * {
   position: relative;
   z-index: 1;
 }
