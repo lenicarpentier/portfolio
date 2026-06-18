@@ -55,7 +55,7 @@ body {
 
   --section-newsletter: rgba(158, 87, 70, 0.6);
   --section-boutique: rgba(111, 136, 158, 0.6);
-  --section-boutique-dark: rgba(46, 54, 61, 0.6);
+  --section-teepublic: rgba(111, 136, 158, 0.6);
   --fade-bottom-color: rgba(237, 228, 213, 0.4);
 
   --btn-bg: #222;
@@ -110,7 +110,8 @@ body.dark {
   --lang-theme-toogle-hover: rgba(237, 228, 213, 0.1);
   --fade-bottom-color: rgba(17, 17, 17, 0.7);
 
-  --section-boutique: var(--section-boutique-dark);
+  --section-boutique: rgba(46, 54, 61, 0.6);
+  --section-teepublic: rgba(46, 54, 61, 0.6);
 }
 
 body.menu-open {
@@ -378,6 +379,7 @@ section {
   text-transform: uppercase;
   padding-bottom: var(--space-sm);
   opacity: 0.4;
+  text-align: center;
 }
 
 .section h2,
@@ -604,7 +606,8 @@ section {
   font-weight: 100;
 }
 
-.info {
+.info,
+.createShop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -624,7 +627,51 @@ section {
   font-weight: 100;
 }
 
-button.newsletter-button {
+.createShop p {
+  line-height: 2.5;
+  max-width: 600px;
+  font-weight: 100;
+}
+
+.teepublic-wrapper {
+  grid-column: 1 / -1;
+  padding: var(--space-xl) 10%;
+  margin-top: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.teepublic-wrapper::before {
+  content: "";
+  position: absolute;
+
+  width: clamp(60px, 60vw, 180px);
+  aspect-ratio: 1 / 1;
+
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: url("../icon/teepublic_light.svg") center / contain no-repeat;
+
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.dark .teepublic-wrapper::before {
+  background: url("../icon/teepublic_dark.svg") center / contain no-repeat;
+  transition: background 0.4s ease;
+  opacity: 0.13;
+}
+
+.teepublic-block .createShop {
+  position: relative;
+  z-index: 1;
+}
+
+button.newsletter-button,
+button.teepublic-button {
   padding: 20px 25px;
   border: none;
   border-radius: var(--radius-md);
@@ -632,6 +679,7 @@ button.newsletter-button {
   color: #ede4d5;
   border-bottom: 2px solid var(--button-border);
   box-shadow: 0 8px 18px var(--button-shadow);
+  line-height: 1.5;
 }
 
 .form-message {
@@ -661,7 +709,7 @@ button.newsletter-button {
 }
 
 body.dark .boutique-section {
-  background: var(--section-boutique-dark);
+  background: var(--section-boutique);
 }
 
 .shop-link {

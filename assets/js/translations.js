@@ -9,7 +9,7 @@ const translations = {
     },
 
     hero: {
-      smallTitle: "Portfolio artistique",
+      smallTitle: "Designer Graphique & Illustrateur",
       title: "Deux pratiques.<br>Une même sensibilité.",
       intro:
         "Design vectoriel et aquarelle traditionnelle, explorés séparément à travers une recherche visuelle personnelle et évolutive.",
@@ -46,6 +46,10 @@ const translations = {
       { title: "Boutiques d'impression à la demande", text: "Découvrez ici une sélection de produits imprimés à la demande avec mes créations.<br><br>Vous pouvez, au travers de ces articles, me soutenir dans ma pratique artistique.<br><br>Merci énormément!" },
     ],
 
+    teepublicCards: [
+      { text: "Vous souhaitez créer votre propre boutique TeePublic ?<br>Cette démarche est entièrement gratuite et vous permet de vendre facilement vos créations sur une large gamme de produits.<br>Vous pourrez ainsi générer des revenus passifs grâce à vos ventes.", button: "Je Vends Mes Créations Sur TeePublic" },
+    ],
+
     meCards: [
       { title: "Personnalité", text: "Je m’appelle Léni Carpentier.<br><br>Je suis un jeune homme observateur, sensible et passionné par la création artistique. J’aime explorer différentes techniques et styles pour reproduire le monde depuis mon point de vue, à travers l’art.<br><br>Je reste ouvert aux critiques constructives, ainsi qu'aux projets souhaités par les amateurs de mon art." },
       { title: "Activité", text: "Je suis passionné par la création vectorielle et aquarelle, comme vous l'avez déjà constaté. J’aime concevoir des expériences claires, modernes et intuitives, où chaque détail a un rôle dans la vision qu'apporte chacun sur mes œuvres.<br><br>Actuellement en formation, je développe mes compétences à travers des projets personnels et m'enrichis dans la pratique.<br><br>Mon objectif est de continuer à progresser afin de pouvoir un jour devenir professionnel dans ce domaine.<br><br>Et c'est en partie grâce à votre soutien que je peux continuer à avancer dans cette voie, je vous en remercie chaleureusement!" },
@@ -66,7 +70,7 @@ const translations = {
       subject: "Objet",
       message: "Message",
       send: "Envoyer",
-      service: "À votre service",
+      service: "Travaillons Ensemble",
       location: "<strong>Localisation :</strong> Schwindratzheim, France",
       description:
         "Je suis disponible pour vous créer du contenu correspondant à mon style. N'hésitez pas à me contacter pour toute demande ou question, je serai ravi de vous répondre et d'échanger avec vous.",
@@ -95,7 +99,7 @@ const translations = {
     },
 
     hero: {
-      smallTitle: "Art Portfolio",
+      smallTitle: "Graphic Designer & Illustrator",
       title: "Two Practices.<br>One Sensibility.",
       intro:
         "Vector design and traditional watercolor, explored through distinct yet complementary artistic practices.",
@@ -162,6 +166,13 @@ const translations = {
       },
     ],
 
+    teepublicCards: [
+      {
+        text: "Would you like to create your own TeePublic store?<br>This process is completely free and allows you to easily sell your creations on a wide range of products.<br>You will be able to generate passive income from your sales.",
+        button: "I Sell My Creations On TeePublic",
+      },
+    ],
+
     meCards: [
       {
         title: "Personality",
@@ -196,7 +207,7 @@ const translations = {
       subject: "Subject",
       message: "Message",
       send: "Send",
-      service: "Get in Touch",
+      service: "Let's Work Together",
       location: "<strong>Location:</strong> Schwindratzheim, France",
       description:
         "I am available for creative projects that align with my artistic style. Feel free to contact me with any questions, ideas, or collaboration opportunities. I would be delighted to hear from you and discuss your project.",
